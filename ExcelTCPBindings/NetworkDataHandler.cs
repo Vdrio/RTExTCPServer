@@ -18,9 +18,12 @@ namespace ExcelTCPBindings
         public static event EventHandler ThankYouServer;
         public static event EventHandler SendSelectionUpdateToClients;
 
-        public static void InitializeNetworkPackages()
+        static bool Server;
+
+        public static void InitializeNetworkPackages(bool server = false)
         {
             Console.WriteLine("Initializing network packages...");
+            Server = server;
             Packets = new Dictionary<int, PacketData>
             {
                 { (int)PacketType.ConnectionOk, HandleConnectionOK }, { (int)PacketType.StringMessage, HandleStringMessage}
@@ -39,7 +42,7 @@ namespace ExcelTCPBindings
             buffer.Dispose();
             if (Packets.TryGetValue(packetNum, out PacketData Packet))
             {
-                Packet.Invoke(-1, data);
+                Packet.Invoke(index, data);
             }
         }
 
@@ -87,7 +90,7 @@ namespace ExcelTCPBindings
             buffer.WriteBytes(data);
             buffer.ReadInteger();
             RangePacket r = buffer.ReadSelectedRange();
-            if (index >= 0)
+            if (Server)
             {
                 SelectionReceived?.Invoke(new Tuple<int, byte[]>(index, data), EventArgs.Empty);
             }
@@ -97,10 +100,6 @@ namespace ExcelTCPBindings
             }
             buffer.Dispose();
             Console.WriteLine(r.User.ToString() + "has updated their selection to: " + r.RangeInfo);
-            if (index >= 0)
-            {
-                SendSelectionUpdateToClients?.Invoke(, EventArgs.Empty);
-            }
         }
 
         private static void HandleRangeUpdate(int index, byte[] data)

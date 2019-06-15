@@ -24,7 +24,7 @@ namespace ExcelTCP
             ServerSocket.Bind(new IPEndPoint(IPAddress.Any, 8081));
             ServerSocket.Listen(10);
             ServerSocket.BeginAccept(new AsyncCallback(AcceptCallback), null);
-            NetworkDataHandler.InitializeNetworkPackages();
+            NetworkDataHandler.InitializeNetworkPackages(true);
             NetworkDataHandler.SelectionReceived += NetworkDataHandler_SelectionReceived;
         }
 
@@ -70,8 +70,8 @@ namespace ExcelTCP
             sizeInfo[2] = (byte)(data.Length >> 16);
             sizeInfo[3] = (byte)(data.Length >> 24);
 
-            Clients[index].socket.Send(sizeInfo);
-            Clients[index].socket.Send(data);
+            Clients[index]?.socket?.Send(sizeInfo);
+            Clients[index]?.socket?.Send(data);
         }
 
         public static void SendConnectionOK(int index)
