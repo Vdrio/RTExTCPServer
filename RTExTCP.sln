@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTExTCP", "RTExTCP\RTExTCP.csproj", "{249DE2E0-8DF9-46BF-A732-6923D465901D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelTCP", "ExcelTCP\ExcelTCP.csproj", "{BCEB447E-47B5-4A95-860F-2042AEE0D4DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelTCPBindings", "ExcelTCPBindings\ExcelTCPBindings.csproj", "{ED5299E6-8E38-48EB-9698-F8CDCF5CA5A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTExServer", "RTExServer\RTExServer.csproj", "{6B068AF7-0217-4967-8478-2DA800ADC8A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{249DE2E0-8DF9-46BF-A732-6923D465901D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249DE2E0-8DF9-46BF-A732-6923D465901D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249DE2E0-8DF9-46BF-A732-6923D465901D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249DE2E0-8DF9-46BF-A732-6923D465901D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCEB447E-47B5-4A95-860F-2042AEE0D4DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCEB447E-47B5-4A95-860F-2042AEE0D4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCEB447E-47B5-4A95-860F-2042AEE0D4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCEB447E-47B5-4A95-860F-2042AEE0D4DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED5299E6-8E38-48EB-9698-F8CDCF5CA5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED5299E6-8E38-48EB-9698-F8CDCF5CA5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED5299E6-8E38-48EB-9698-F8CDCF5CA5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED5299E6-8E38-48EB-9698-F8CDCF5CA5A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B068AF7-0217-4967-8478-2DA800ADC8A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B068AF7-0217-4967-8478-2DA800ADC8A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B068AF7-0217-4967-8478-2DA800ADC8A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B068AF7-0217-4967-8478-2DA800ADC8A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23038838-42B6-47C3-B0C2-212837B9EEEF}
+	EndGlobalSection
+EndGlobal
