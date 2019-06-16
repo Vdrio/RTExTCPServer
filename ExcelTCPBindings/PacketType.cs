@@ -87,7 +87,7 @@ namespace ExcelTCPBindings
                 //Applies to Top Left Bottom Right InsideHor InsideVert DiagonalUp DiagonalDown
                 AllBorderLineStyle = 1109,                             //Range.Borders.LineStyle      ??????
 
-                //range.interior
+        //range.interior
 
         //Changes.Cells.Number (i.e. general, number, currency as seen in format cells) **********************************************************************(1200-1299)
 
@@ -107,9 +107,12 @@ namespace ExcelTCPBindings
         //Changes.Charts (5000s) -------------o-----------------o-----------------o-----------------5000s-----------------o-----------------o-----------------o--------------
         //Changes.Sheets (6000s) -------------o-----------------o-----------------o-----------------6000s-----------------o-----------------o-----------------o--------------
         //Changes.Review (7000s) -------------o-----------------o-----------------o-----------------7000s-----------------o-----------------o-----------------o--------------
-            //Changes.Review.Comments ****************************************************************************************************************************(7000-7099)
+        //Changes.Review.Comments ****************************************************************************************************************************(7000-7099)
 
         //Changes.View (8000s) ---------------o-----------------o-----------------o-----------------8000s-----------------o-----------------o-----------------o--------------
+        
+                //For freezing panes
+        //https://stackoverflow.com/questions/5060488/how-to-freeze-top-row-and-apply-filter-in-excel-automation-with-c-sharp
     }
 
 
